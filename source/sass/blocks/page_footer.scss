@@ -1,0 +1,9 @@
+.footer {
+  @include container;
+}
+
+.academy__link {
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,48 @@
+.programs {
+  @include container;
+}
+
+.programs__list {
+  @include list_style;
+}
+
+.programs__item {
+  padding: 20px;
+  background-color: $basic_grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.programs__subtitle {
+  min-height: 53px;
+
+  @include margin_reset(22px);
+
+  padding-left: 69px;
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 24px;
+  }
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.programs__text {
+  @include margin_reset(23px);
+}
+
+.programs__link {
+  padding: 4px 47px 4px 0;
+  font: {
+    family: $font_heading;
+    size: 16px;
+  }
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+}

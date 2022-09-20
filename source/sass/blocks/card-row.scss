@@ -1,0 +1,20 @@
+.card-row {
+  @include list_style;
+}
+
+.card-row__item {
+  padding: 13px 0 19px;
+}
+
+.card-row__title {
+  @include margin_reset(13px);
+
+  line-height: 1em;
+}
+
+.card-row__text {
+  display: inline-block;
+  @include margin_reset(15px);
+  font-weight: 400;
+  line-height: 1em;
+}

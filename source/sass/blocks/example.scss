@@ -1,0 +1,44 @@
+.example {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  @include container;
+
+  background-color: #eaeaea;
+}
+
+.example__title {
+ @include margin_reset(40px);
+}
+
+.example__text {
+  @include margin_reset(20px);
+}
+
+.example__data {
+  text-align: center;
+}
+
+.example__termin {
+  font-size: 12px;
+  line-height: 1em;
+}
+
+.example__data-descr {
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 24px;
+  }
+  line-height: 1em;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.example__price {
+  margin-bottom: 40px;
+  font-family: $font_heading;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+}

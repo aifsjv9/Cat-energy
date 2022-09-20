@@ -1,0 +1,18 @@
+.cards {
+  @include list_style;
+}
+
+.cards__item {
+  padding: 19px 0 25px;
+
+  @include container;
+}
+
+.cards__title-link {
+  text-decoration: none;
+}
+
+.cards__description {
+  font-size: 12px;
+  line-height: 16px;
+}

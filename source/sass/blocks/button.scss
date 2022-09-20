@@ -1,0 +1,21 @@
+.button {
+  display: block;
+  padding: 10px 40px;
+  text-align: center;
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  background-color: $primary;
+  border: none;
+}
+
+.button_gray {
+  color: $color_text;
+  background-color: $basic_grey;
+}

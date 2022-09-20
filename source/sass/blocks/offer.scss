@@ -1,0 +1,30 @@
+.offer {
+  padding: 35px 0;
+}
+
+.offer__content {
+  position: relative;
+  height: 290px;
+  padding: 40px 30px;
+  text-align: center;
+  background: url('/source/img/mobile/catalog/offer_background.jpg') no-repeat center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+}
+
+.offer__text {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+}

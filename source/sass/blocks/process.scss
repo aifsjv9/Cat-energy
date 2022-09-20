@@ -1,0 +1,19 @@
+.process {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @include container;
+}
+
+.process__title {
+  @include margin_reset(40px);
+}
+
+.process__list {
+  @include list_style;
+}
+
+.process__item {
+  min-height: 60px;
+  padding-left: 80px;
+}

@@ -1,0 +1,55 @@
+.form {
+  padding-bottom: 32px;
+}
+
+.form__group {
+  margin: 0;
+
+  @include container;
+
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+
+  &:nth-child(-n+2) {
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.form__legend {
+  margin-bottom: 37px;
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 24px;
+  }
+  line-height: 26px;
+  text-transform: none;
+  color: $black;
+}
+
+.form__input:not([type='radio'], [type='checkbox']) {
+  height: 45px;
+  font: inherit;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color_text;
+}
+
+.form__button {
+  margin: 0 20px 21px;
+}
+
+.form__fn {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+}
+

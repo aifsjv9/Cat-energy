@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #e5e5e5;
+}
+
+.page {
+  margin: 0;
+  font: {
+    family: $font_page;
+    size: 14px;
+    weight: 400;
+  }
+  line-height: 18px;
+  color: $color_text;
+  background-color: $white;
+}
+
+.title {
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 36px;
+  }
+  line-height: 40px;
+  color: $black;
+}
+
+.subtitle {
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+}

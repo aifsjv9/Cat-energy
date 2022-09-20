@@ -1,0 +1,34 @@
+.products__more {
+  padding: 78px 0 25px;
+
+  @include container;
+}
+
+.products__title {
+  @include margin_reset(8px);
+}
+
+.products__text {
+  @include margin_reset(21px);
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.products-other {
+  padding-top: 25px;
+
+  @include container;
+}
+
+.products-other__title {
+  @include margin_reset(36px);
+
+  font: {
+    family: $font_heading;
+    weight: 400;
+    size: 24px;
+  }
+  line-height: 1em;
+  color: $black;
+}

@@ -1,0 +1,9 @@
+.main-catalog {
+  padding-top: 23px;
+}
+
+.main-catalog__title {
+  @include margin_reset(41px);
+  padding: 0 20px;
+}
+

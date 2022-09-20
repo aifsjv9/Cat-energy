@@ -1,27 +1,32 @@
-import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import sass from 'gulp-dart-sass';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const sync = require("browser-sync").create();
 
 // Styles
 
-export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+const styles = () => {
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemap.init())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("source/css"))
+    .pipe(sync.stream());
 }
+
+exports.styles = styles;
 
 // Server
 
 const server = (done) => {
-  browser.init({
+  sync.init({
     server: {
       baseDir: 'source'
     },
@@ -32,14 +37,15 @@ const server = (done) => {
   done();
 }
 
+exports.server = server;
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-
-export default gulp.series(
+exports.default = gulp.series(
   styles, server, watcher
 );

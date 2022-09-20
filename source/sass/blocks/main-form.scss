@@ -1,0 +1,18 @@
+.main-form__header {
+  padding-top: 27px;
+
+  @include container;
+}
+
+.main-form__title {
+  @include margin_reset(37px);
+
+  line-height: 1em;
+}
+
+.main-form__header-text {
+  @include margin_reset(39px);
+
+  font-family: $font_heading;
+  text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+.nav {
+  font: {
+    family: $font_heading;
+    size: 20px;
+    weight: 500;
+  }
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav__list {
+  @include list_style;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $black;
+}
