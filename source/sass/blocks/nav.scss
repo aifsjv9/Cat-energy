@@ -1,4 +1,5 @@
 .nav {
+  position: relative;
   font: {
     family: $font_heading;
     size: 20px;
@@ -7,13 +8,167 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font: {
+      weight: 400;
+      size: 18px;
+    }
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.nav__button {
+  position: relative;
+  width: 42px;
+  height: 100%;
+  margin-right: -9px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.nav_closed .nav__button::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 24px;
+  height: 1.5px;
+  background-color: $black;
+  box-shadow: 0 8px $black, 0 16px $black;
+}
+
+.nav_opened .nav__button {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 24px;
+    height: 1.5px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.nav_closed {
+  .nav__button:hover::before {
+    background-color: $primary;
+    box-shadow: 0 8px $primary, 0 16px $primary;
+  }
+
+  .nav__button:active::before {
+    background-color: $primary;
+    opacity: 0.4;
+  }
+}
+.nav_opened {
+  .nav__button:hover::before,
+  .nav__button:hover::after {
+    background-color: $primary;
+  }
+
+  .nav__button:active::before,
+  .nav__button:active::after {
+    background-color: $primary;
+  opacity: 0.4;
+  }
+}
+
+@media (max-width: $only-mobile) {
+  .nav_opened .nav__list {
+    position: absolute;
+    top: 52px;
+    right: -20px;
+    width: 320px;
+  }
+
+  .nav_closed .nav__list {
+    display: none;
+  }
 }
 
 .nav__list {
   @include list_style;
+
+  background-color: $white;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    position: static;
+    width: auto;
+  }
 }
 
+.nav__item {
+  position: relative;
+  height: 66px;
+
+  &:not(:first-child) {
+    margin-top: -1px;
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet) {
+    height: auto;
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+    border: none;
+
+    &--current::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      height: 2px;
+      background-color: $primary;
+    }
+  }
+}
+
+
 .nav__link {
+  display: block;
+  line-height: 64px;
   text-decoration: none;
   color: $black;
+
+  @media (min-width: $tablet) {
+    padding: 10px;
+    line-height: inherit;
+  }
+}
+
+.nav__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

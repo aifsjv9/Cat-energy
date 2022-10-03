@@ -4,20 +4,69 @@
 
 .programs__list {
   @include list_style;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
   padding: 20px;
   background-color: $basic_grey;
+  background-repeat: no-repeat;
+
+  &:nth-child(1) {
+    background-image: url(/source/img/mobile/weight_loss.svg);
+    background-position: top 21px left 22px;
+
+    @media (min-width: $tablet) {
+      background-size: 200px auto;
+      background-position: right 62px center;
+    }
+
+    @media (min-width: $desktop) {
+      background-size: 100px auto;
+      background-position: top 41px left 52px;
+    }
+  }
+
+  &:nth-child(2) {
+    background-image: url(/source/img/mobile/weight_gain.svg);
+    background-position: top 24px left 13px;
+
+    @media (min-width: $tablet) {
+      background-size: 268px auto;
+      background-position: right 28px center;
+    }
+
+    @media (min-width: $desktop) {
+      background-size: 134px auto;
+      background-position: top 47px left 33px;
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 77px 52px 57px;
+    padding-right: 300px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 41px 52px 55px;
   }
 }
 
 .programs__subtitle {
-  min-height: 53px;
-
   @include margin_reset(22px);
 
   padding-left: 69px;
@@ -26,23 +75,71 @@
     weight: 400;
     size: 24px;
   }
-  line-height: 37px;
+  line-height: 50px;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet) {
+    min-height: auto;
+    padding: 0;
+    font-size: 36px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 39px;
+    padding-left: 162px;
+    line-height: 100px;
+  }
 }
 
 .programs__text {
   @include margin_reset(23px);
+
+  @media (min-width: $tablet) {
+    min-height: 125px;
+  }
 }
 
 .programs__link {
+  position: relative;
+  display: inline-block;
   padding: 4px 47px 4px 0;
   font: {
     family: $font_heading;
     size: 16px;
   }
-  line-height: 16px;
+  line-height: 1em;
   text-transform: uppercase;
   text-decoration: none;
   color: $black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 32px;
+    height: 10px;
+    background: transparent url(/source/img/icon/icon-arrow.svg) no-repeat left center;
+  }
+
+  &:hover::after {
+    background-image: url(/source/img/icon/icon_arrow_long.svg);
+  }
+
+  &:active,
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 9px 57px;
+    padding-left: 0;
+    font-size: 20px;
+
+    &::after {
+      top: 14px;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 .button {
   display: block;
-  padding: 10px 40px;
+  padding: 10px 26px;
   text-align: center;
   font: {
     family: $font_heading;
@@ -13,9 +13,29 @@
   color: $white;
   background-color: $primary;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    // color: rgba(255, 255, 255, 0.3);
+    color: fade-out($color: $white, $amount: 0.7);
+    background-color: $primary-hover;
+  }
 }
 
 .button_gray {
   color: $color_text;
   background-color: $basic_grey;
+
+  &:hover {
+    background-color: $gray_100;
+  }
+
+  &:active {
+    color: fade-out($color: $color_text, $amount: 0.7);
+    background-color: $gray_100;
+  }
 }

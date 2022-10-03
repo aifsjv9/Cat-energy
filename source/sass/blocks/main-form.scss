@@ -1,13 +1,31 @@
+.main-form {
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    @include container;
+
+    border: none;
+  }
+}
+
 .main-form__header {
   padding-top: 27px;
 
   @include container;
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
 }
 
 .main-form__title {
   @include margin_reset(37px);
 
   line-height: 1em;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 54px;
+  }
 }
 
 .main-form__header-text {
@@ -15,4 +33,14 @@
 
   font-family: $font_heading;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-form .main__footer {
+  background-color: $basic_grey;
 }

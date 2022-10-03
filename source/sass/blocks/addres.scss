@@ -1,8 +1,40 @@
+.addres {
+  position: relative;
+  background-color: $white;
+}
+
 .addres__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 26px 20px;
+
+  @media (min-width: $tablet) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .addres__text {
+  justify-self: end;
   margin: 0;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
 }

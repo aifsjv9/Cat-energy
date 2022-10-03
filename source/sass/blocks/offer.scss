@@ -1,10 +1,20 @@
 .offer {
   padding: 35px 0;
+
+  @media (min-width: $tablet) {
+    padding: 69px 0 76px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .offer__content {
+  display: grid;
+  justify-content: center;
   position: relative;
-  height: 290px;
+  min-height: 290px;
   padding: 40px 30px;
   text-align: center;
   background: url('/source/img/mobile/catalog/offer_background.jpg') no-repeat center;
@@ -19,12 +29,69 @@
     left: 0;
     background-color: rgba(104, 183, 56, 0.85);
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    width: 78px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('/source/img/mobile/catalog/icon_gift.svg') no-repeat center;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    justify-items: start;
+    align-content: center;
+    text-align: left;
+    min-height: 200px;
+    padding: 30px;
+    background-position: center -315px;
+
+    &::after {
+      top: 57px;
+      left: 77px;
+      right: auto;
+      width: 80px;
+      height: 83px;
+      background-size: 100%;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: auto;
+    gap: 0;
+    align-content: normal;
+    text-align: center;
+    min-height: 288px;
+    padding: 42px 30px;
+    background-position: center;
+  }
+
+  &::after {
+    left: 84px;
+  }
 }
 
 .offer__text {
   position: relative;
   z-index: 1;
+  margin-top: auto;
   font-size: 16px;
   line-height: 20px;
   color: $white;
+
+  @media (min-width: $tablet) {
+    grid-column: 2/3;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+  }
 }

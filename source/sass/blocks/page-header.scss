@@ -1,8 +1,24 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
   padding-top: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 10px;
+
   @include container;
 
+  @media (min-width: $tablet) {
+    grid-template-columns: min-content auto;
+    column-gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 53px;
+    padding-bottom: 10px;
+  }
+}
+
+.header__nav {
+  justify-self: end;
 }

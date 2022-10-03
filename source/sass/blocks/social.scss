@@ -1,0 +1,37 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  grid-template-rows: min-content;
+  justify-content: center;
+  align-content: center;
+  gap: 13px;
+  min-height: 63px;
+
+  @include list_style;
+}
+
+.social__link {
+  display: flex;
+  width: 40px;
+  height: 34px;
+}
+
+.social__item:not(:last-child) .social__link:hover path {
+  fill: $primary;
+}
+
+.social__item:last-child .social__link:hover path {
+  stroke: $primary;
+}
+
+.social__item:not(:last-child) .social__link:active path {
+  fill: fade-out($color: $primary, $amount: 0.7);
+}
+
+.social__item:last-child .social__link:active path {
+  stroke: fade-out($color: $primary, $amount: 0.7);
+}
+
+.social__icon {
+  margin: auto;
+}

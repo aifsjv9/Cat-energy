@@ -1,9 +1,70 @@
 .footer {
+  display: grid;
   @include container;
+
+  background-color: $basic_grey;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: max-content auto max-content;
+    column-gap: 20px;
+    min-height: 147px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__social {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
+}
+
+.academy {
+  min-height: 79px;
 }
 
 .academy__link {
-  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 22px;
+  align-items: center;
+  min-height: 100%;
+
+  font-size: 16px;
   text-decoration: none;
   color: inherit;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.academy__link:hover path {
+  fill: $primary;
+}
+
+.academy__link:active path {
+  fill: fade-out($color: $primary, $amount: 0.7);
 }

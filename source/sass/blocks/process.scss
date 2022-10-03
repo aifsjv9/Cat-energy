@@ -3,17 +3,123 @@
   padding-bottom: 49px;
 
   @include container;
+
+  @media (min-width: $tablet) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
 }
 
 .process__title {
   @include margin_reset(40px);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
 }
 
 .process__list {
   @include list_style;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }
 
 .process__item {
+  position: relative;
+  z-index: 1;
   min-height: 60px;
   padding-left: 80px;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url(/source/img/icon/icon_leaf.svg);
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(/source/img/icon/icon_tub.svg);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(/source/img/icon/icon_eat.svg);
+  }
+
+  &:nth-child(4)::before {
+    background-image: url(/source/img/icon/icon_alarm.svg);
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 280px;
+    padding-left: 0;
+    padding-top: 150px;
+
+    &::before {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: 0;
+
+      font: {
+        family: 'Oswald', sans-serif;
+        size: 280px;
+        weight: 400;
+      }
+      line-height: 1em;
+      color: $basic_grey;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+}
+
+.process__text {
+  position:relative;
+  display: inline-block;
+  z-index: 3;
+  max-width: 245px;
 }
