@@ -73,7 +73,6 @@
 }
 
 .form__group_additional {
-
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -181,7 +180,7 @@
   }
 }
 
-input[type=radio]:checked + .control__text::after {
+input[type="radio"]:checked + .control__text::after {
   content: "";
   position: absolute;
   top: 8.5px;
@@ -192,14 +191,14 @@ input[type=radio]:checked + .control__text::after {
   border-radius: 50%;
 }
 
-input[type=checkbox]:checked + .control__text::after {
+input[type="checkbox"]:checked + .control__text::after {
   content: "";
   position: absolute;
   top: 8px;
   left: 6px;
   width: 18px;
   height: 14px;
-  background: transparent url(/source/img/mobile/catalog/check.svg) no-repeat center;
+  background: transparent url("/source/img/icon/check.svg") no-repeat center;
 }
 
 
@@ -217,24 +216,18 @@ input[type=checkbox]:checked + .control__text::after {
     outline: none;
   }
 
-  &[type='email']:focus + .form__icon path {
-    stroke: $primary;
-  }
-
-  &[type='tel']:focus + .form__icon path {
-    fill: $primary;
+  &[type="email"]:focus + .form__icon,
+  &[type="tel"]:focus + .form__icon {
+    color: $primary;
   }
 
   &_error {
     border: 2px solid $status-error;
   }
 
-  &_error[type='email'] + .form__icon path {
-    stroke: $status-error;
-  }
-
-  &_error[type='tel'] + .form__icon path {
-    fill: $status-error;
+  &_error[type="email"] + .form__icon,
+  &_error[type="tel"] + .form__icon {
+    color: $status-error;
   }
 }
 
@@ -244,7 +237,7 @@ textarea[disabled] {
   opacity: 0.3;
 }
 
-.form__input:not([type='radio'], [type='checkbox']) {
+.form__input:not([type="radio"], [type="checkbox"]) {
   min-height: 45px;
 
   font: inherit;
@@ -253,7 +246,7 @@ textarea[disabled] {
   color: $color_text;
 }
 
-.form__input[type='text'],[type='tel'],[type='email'] {
+.form__input[type="text"],[type="tel"], [type="email"] {
   flex-grow: 1;
 }
 

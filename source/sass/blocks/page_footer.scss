@@ -1,19 +1,16 @@
 .footer {
-  display: grid;
-  @include container;
-
   background-color: $basic_grey;
+}
+
+.footer__container {
+  display: grid;
+  min-height: 147px;
+
+  @include container;
 
   @media (min-width: $tablet) {
     grid-template-columns: max-content auto max-content;
     column-gap: 20px;
-    min-height: 147px;
-  }
-
-  @media (min-width: $desktop) {
-    max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
   }
 }
 
@@ -54,17 +51,21 @@
 
   font-size: 16px;
   text-decoration: none;
-  color: inherit;
+  color: #666666;
 
   &:active {
     opacity: 0.3;
   }
 }
 
-.academy__link:hover path {
-  fill: $primary;
+.academy__link:hover .academy__logo {
+  color: $primary;
 }
 
-.academy__link:active path {
-  fill: fade-out($color: $primary, $amount: 0.7);
+.academy__link:active .academy__logo {
+  color: fade-out($color: $primary, $amount: 0.7);
+}
+
+.academy__text {
+  color: $color_text;
 }

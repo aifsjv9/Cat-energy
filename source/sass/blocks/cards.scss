@@ -88,12 +88,16 @@
 
 .cards__link {
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .cards__img {
   margin: auto;
 
   @media (min-width: $tablet) {
+    width: auto;
+    height: auto;
     margin-bottom: 0;
   }
 }

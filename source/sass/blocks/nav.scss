@@ -79,6 +79,7 @@
     opacity: 0.4;
   }
 }
+
 .nav_opened {
   .nav__button:hover::before,
   .nav__button:hover::after {
@@ -88,7 +89,7 @@
   .nav__button:active::before,
   .nav__button:active::after {
     background-color: $primary;
-  opacity: 0.4;
+    opacity: 0.4;
   }
 }
 
@@ -117,12 +118,19 @@
   }
 }
 
+.nav_index .nav__list {
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
+}
+
 .nav__item {
   position: relative;
   height: 66px;
 
   &:not(:first-child) {
     margin-top: -1px;
+
     @media (min-width: $tablet) {
       margin-top: 0;
     }
@@ -133,6 +141,7 @@
 
   @media (min-width: $tablet) {
     height: auto;
+
     &:not(:last-child) {
       margin-right: 14px;
     }
@@ -147,6 +156,12 @@
       height: 2px;
       background-color: $primary;
     }
+  }
+}
+
+.nav_index .nav__item {
+  &--current::before {
+    background-color: $white;
   }
 }
 
@@ -165,10 +180,28 @@
 
 .nav__link[href] {
   &:hover {
-    opacity: 0.6;
+    color: fade-out($color: $black, $amount: 0.4);
   }
 
   &:active {
-    opacity: 0.3;
+    color: fade-out($color: $black, $amount: 0.7);
+  }
+}
+
+.nav_index .nav__link {
+  @media (min-width: $desktop) {
+    color: $white;
+  }
+}
+
+.nav_index .nav__link[href] {
+  @media (min-width: $desktop) {
+    &:hover {
+      color: fade-out($color: $white, $amount: 0.4);
+    }
+
+    &:active {
+      color: fade-out($color: $white, $amount: 0.7);
+    }
   }
 }

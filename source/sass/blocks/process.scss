@@ -58,19 +58,19 @@
   }
 
   &:nth-child(1)::before {
-    background-image: url(/source/img/icon/icon_leaf.svg);
+    background-image: url("/source/img/icon/icon_leaf.svg");
   }
 
   &:nth-child(2)::before {
-    background-image: url(/source/img/icon/icon_tub.svg);
+    background-image: url("/source/img/icon/icon_tub.svg");
   }
 
   &:nth-child(3)::before {
-    background-image: url(/source/img/icon/icon_eat.svg);
+    background-image: url("/source/img/icon/icon_eat.svg");
   }
 
   &:nth-child(4)::before {
-    background-image: url(/source/img/icon/icon_alarm.svg);
+    background-image: url("/source/img/icon/icon_alarm.svg");
   }
 
   @media (min-width: $tablet) {
@@ -91,7 +91,7 @@
       z-index: 0;
 
       font: {
-        family: 'Oswald', sans-serif;
+        family: "Oswald", sans-serif;
         size: 280px;
         weight: 400;
       }
@@ -118,7 +118,7 @@
 }
 
 .process__text {
-  position:relative;
+  position: relative;
   display: inline-block;
   z-index: 3;
   max-width: 245px;

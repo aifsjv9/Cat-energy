@@ -10,15 +10,18 @@
 }
 
 .slider__list {
+  max-width: 592px;
+
   @include list_style;
 }
 
 .slider__item {
+  display: none;
   height: 100%;
   text-align: center;
 
-  &:last-child {
-    display: none;
+  &_active {
+    display: block;
   }
 }
 
@@ -41,6 +44,7 @@
 
 .switching__value {
   cursor: pointer;
+
   @media (min-width: $tablet) {
     line-height: 30px;
     border-bottom: 1px dotted fade-out($color: $black, $amount: 0.76);

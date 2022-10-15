@@ -1,7 +1,6 @@
 .example {
   padding-top: 25px;
   padding-bottom: 40px;
-  @include container;
 
   background-color: #eaeaea;
 
@@ -13,18 +12,24 @@
   }
 
   @media (min-width: $desktop) {
+    min-height: 640px;
+    padding-top: 0;
+    // padding-left: 110px;
+    // padding-right: 110px;
+    background-image: linear-gradient($white 170px, $basic_grey 170px);
+  }
+}
+
+.example__container {
+  @include container;
+
+  @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 592px;
     grid-template-rows: 179px auto auto;
     column-gap: 45px;
     row-gap: 20px;
     align-items: center;
-    max-width: 1440px;
-    min-height: 640px;
-    padding-top: 0;
-    padding-left: 110px;
-    padding-right: 110px;
-    background-image: linear-gradient($white 170px, $basic_grey 170px);
   }
 }
 
@@ -32,11 +37,11 @@
   @include margin_reset(40px);
 
   @media (min-width: $tablet) {
-  margin-bottom: 63px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop) {
-  margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 

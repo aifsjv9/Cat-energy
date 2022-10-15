@@ -14,22 +14,15 @@
   display: flex;
   width: 40px;
   height: 34px;
+  color: #666666;
 }
 
-.social__item:not(:last-child) .social__link:hover path {
-  fill: $primary;
+.social__link:hover {
+  color: $primary;
 }
 
-.social__item:last-child .social__link:hover path {
-  stroke: $primary;
-}
-
-.social__item:not(:last-child) .social__link:active path {
-  fill: fade-out($color: $primary, $amount: 0.7);
-}
-
-.social__item:last-child .social__link:active path {
-  stroke: fade-out($color: $primary, $amount: 0.7);
+.social__link:active {
+  color: fade-out($color: $primary, $amount: 0.7);
 }
 
 .social__icon {
