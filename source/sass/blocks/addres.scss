@@ -1,6 +1,10 @@
 .addres {
   position: relative;
   background-color: $white;
+
+  @media (min-width: $desktop) {
+    min-height: 400px;
+  }
 }
 
 .addres__wrapper {

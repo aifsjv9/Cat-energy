@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple.png">           <!--180x180-->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <script>
       // Picture element HTML5 shiv
@@ -131,12 +131,16 @@
             <ul class="slider__list">
               <li class="slider__item slider__item_active">
                 <picture>
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/cat-fat_medium.webp 1x, img/cat-fat_medium@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-fat_small.webp 1x, img/cat-fat_small@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/cat-fat_medium.png 1x, img/cat-fat_medium@2x.png 2x">
                   <img class="slider__img" src="img/cat-fat_small.png" width="280" height="232" stcset="img/cat-fat_small@2x.png 2x" alt="Толстый кот.">
                 </picture>
               </li>
               <li class="slider__item">
                 <picture>
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/cat-skinny_medium.webp 1x, img/cat-skinny_medium@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-skinny_small.webp 1x, img/cat-skinny_small@2x.webp 2x">
                   <source media="(min-width: 1280px)" srcset="img/cat-skinny_medium.png 1x, img/cat-skinny_medium@2x.png 2x">
                 </picture>
                 <img class="slider__img" src="img/cat-skinny_small.png" width="243" height="232" srcset="img/cat-skinny_small@2x.png 2x" alt="Худой кот.">

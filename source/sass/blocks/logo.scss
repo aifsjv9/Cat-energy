@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: $tablet) {
     width: 174px;
@@ -39,5 +40,12 @@
   @media (min-width: $desktop) {
     width: 70px;
     height: 60px;
+  }
+}
+
+.logo__sign {
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 22px;
   }
 }

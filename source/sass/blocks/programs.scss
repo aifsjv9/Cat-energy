@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
 
   &:nth-child(1) {
-    background-image: url("/source/img/icon/weight_loss.svg");
+    background-image: url("../img/icon/weight_loss.svg");
     background-position: top 21px left 22px;
 
     @media (min-width: $tablet) {
@@ -34,7 +34,7 @@
   }
 
   &:nth-child(2) {
-    background-image: url("/source/img/icon/weight_gain.svg");
+    background-image: url("../img/icon/weight_gain.svg");
     background-position: top 24px left 13px;
 
     @media (min-width: $tablet) {
@@ -121,11 +121,11 @@
     right: 0;
     width: 32px;
     height: 10px;
-    background: transparent url("/source/img/icon/icon-arrow.svg") no-repeat left center;
+    background: transparent url("../img/icon/icon-arrow.svg") no-repeat left center;
   }
 
   &:hover::after {
-    background-image: url("/source/img/icon/icon_arrow_long.svg");
+    background-image: url("../img/icon/icon_arrow_long.svg");
   }
 
   &:active,
