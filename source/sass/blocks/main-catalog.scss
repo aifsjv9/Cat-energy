@@ -3,12 +3,17 @@
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
+    padding-top: 35px;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 60px;
   }
 }
 
 .main-catalog__title {
-  @include margin_reset(41px);
+  @include margin_reset(36px);
   @include container;
 
   @media (min-width: $tablet) {

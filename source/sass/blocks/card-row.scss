@@ -3,7 +3,7 @@
 }
 
 .card-row__item {
-  padding: 13px 0 19px;
+  padding: 13px 0 17px;
   border-top: 1px solid $gray_200;
   border-bottom: 1px solid $gray_200;
   margin-top: -1px;
@@ -62,9 +62,10 @@
 
 .card-row__price {
   font-weight: 400;
+  justify-self: end;
 
   @media (min-width: $desktop) {
-    justify-self: end;
+
   }
 }
 

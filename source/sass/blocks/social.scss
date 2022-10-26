@@ -8,23 +8,39 @@
   min-height: 63px;
 
   @include list_style;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(auto-fit, 50px);
+    gap: 0;
+    margin-right: -25px;
+  }
 }
 
 .social__link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 34px;
   color: #666666;
-}
 
-.social__link:hover {
-  color: $primary;
-}
+  &:hover {
+    color: $primary;
+  }
 
-.social__link:active {
-  color: fade-out($color: $primary, $amount: 0.7);
+  &:active {
+    color: fade-out($color: $primary, $amount: 0.7);
+  }
+
+  @media (min-width: $tablet) {
+    width: 50px;
+    height: 40px;
+  }
 }
 
 .social__icon {
-  margin: auto;
+
+  @media (min-width: $tablet) {
+    transform: scale(1.5);
+  }
 }

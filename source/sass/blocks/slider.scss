@@ -1,11 +1,15 @@
 .slider {
   display: grid;
   grid-template-rows: 232px max-content;
-  row-gap: 15px;
+  row-gap: 18px;
 
   @media (min-width: $tablet) {
     grid-template-rows: 511px max-content;
     row-gap: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 33px;
   }
 }
 
@@ -35,10 +39,11 @@
   grid-template-columns: 1fr 86px 1fr;
   justify-items: start;
   align-items: center;
-  column-gap: 13px;
+  column-gap: 18px;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 426px 1fr;
+    column-gap: 23px;
   }
 }
 

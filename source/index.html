@@ -79,12 +79,16 @@
         <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list">
             <li class="programs__item">
-              <h3 class="programs__subtitle">Похудение</h3>
+              <div class="programs__wrapper">
+                <h3 class="programs__subtitle">Похудение</h3>
+              </div>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="programs__link" href="catalog.html#catalog-slim">Каталог slim</a>
             </li>
             <li class="programs__item">
-              <h3 class="programs__subtitle">Набор массы</h3>
+              <div class="programs__wrapper">
+                <h3 class="programs__subtitle">Набор массы</h3>
+              </div>
               <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="programs__link" href="catalog.html#catalog-pro">Каталог pro</a>
             </li>
@@ -141,9 +145,9 @@
                 <picture>
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/cat-skinny_medium.webp 1x, img/cat-skinny_medium@2x.webp 2x">
                   <source type="image/webp" srcset="img/cat-skinny_small.webp 1x, img/cat-skinny_small@2x.webp 2x">
-                  <source media="(min-width: 1280px)" srcset="img/cat-skinny_medium.png 1x, img/cat-skinny_medium@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/cat-skinny_medium.png 1x, img/cat-skinny_medium@2x.png 2x">
+                  <img class="slider__img" src="img/cat-skinny_small.png" width="243" height="232" srcset="img/cat-skinny_small@2x.png 2x" alt="Худой кот.">
                 </picture>
-                <img class="slider__img" src="img/cat-skinny_small.png" width="243" height="232" srcset="img/cat-skinny_small@2x.png 2x" alt="Худой кот.">
               </li>
             </ul>
             <div class="slider__switching switching">
@@ -161,11 +165,22 @@
 
       <footer class="main__footer addres">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <div class="addres__wrapper">
-          <b class="subtitle">Приглашаем<br> к сотрудничеству<br> дилеров!</b>
-          <p class="addres__text">ул. Большая<br> Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
+        <div class="addres__container">
+          <div class="addres__card">
+            <b class="subtitle">Приглашаем<br> к сотрудничеству<br> дилеров!</b>
+            <p class="addres__text">ул. Большая<br> Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
+          </div>
         </div>
-        <img class="addres__map" src="img/map.jpg" width="320" height="362" alt="Карта с расположением нашего офиса">
+        <div class="addres__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1220px)" srcset="img/map_large.webp 1x, img/map_large@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map_medium.webp 1x, img/map_medium@2x.webp 2x">
+            <source type="image/webp" srcset="img/map_small.webp 1x, img/map_small@2x.webp 2x">
+            <source media="(min-width: 1220px)" srcset="img/map_large.jpg 1x, img/map_large@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map_medium.jpg 1x, img/map_medium@2x.jpg 2x">
+            <img class="addres__map-img" src="img/map_small.jpg" width="763" height="362" srcset="img/map_small@2x.jpg 2x" alt="Карта с расположением нашего офиса">
+          </picture>
+        </div>
       </footer>
     </main>
 

@@ -10,7 +10,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
-    gap: 69px 80px;
+    gap: 67px 80px;
     padding: 0;
     padding-bottom: 82px;
   }
@@ -18,7 +18,7 @@
 
 .form__group {
   display: grid;
-  row-gap: 13px;
+  row-gap: 14px;
 
   margin: 0;
   padding: 0;
@@ -45,8 +45,11 @@
     row-gap: 20px;
     padding-left: 0;
     padding-right: 0;
+    font-size: 20px;
+    line-height: 30px;
 
     &:nth-child(2) {
+      row-gap: 13px;
       margin-top: 10px;
       margin-bottom: 10px;
       padding: 25px 27px;
@@ -117,6 +120,10 @@
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 1em;
+
+    &::before {
+      margin-top: 23px;
+    }
   }
 }
 
@@ -129,6 +136,7 @@
   background-color: $white;
 
   @media (min-width: $tablet) {
+    width: auto;
     margin-left: -39px;
     padding: 0 39px;
   }
@@ -139,19 +147,22 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .control {
   min-height: 30px;
+
+  @media (min-width: $tablet) {
+    min-height: 40px;
+  }
 }
 
 .form__label-text {
   margin-right: 12px;
+
+  @media (min-width: $tablet) {
+    margin-right: 17px;
+  }
 }
 
 .control__text {
@@ -178,6 +189,15 @@
   &:hover::before {
     border: 1px solid #bababa;
   }
+
+  @media (min-width: $tablet) {
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 input[type="radio"]:checked + .control__text::after {
@@ -189,6 +209,13 @@ input[type="radio"]:checked + .control__text::after {
   height: 13px;
   background-color: $primary;
   border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 input[type="checkbox"]:checked + .control__text::after {
@@ -199,6 +226,12 @@ input[type="checkbox"]:checked + .control__text::after {
   width: 18px;
   height: 14px;
   background: transparent url("../img/icon/check.svg") no-repeat center;
+
+  @media (min-width: $tablet) {
+    top: 12px;
+    left: 12px;
+    transform: scale(1.4);
+  }
 }
 
 
@@ -229,6 +262,10 @@ input[type="checkbox"]:checked + .control__text::after {
   &_error[type="tel"] + .form__icon {
     color: $status-error;
   }
+
+  @media (min-width: $tablet) {
+    padding-left: 18px;
+  }
 }
 
 input[disabled],
@@ -244,6 +281,10 @@ textarea[disabled] {
   line-height: 18px;
   text-transform: uppercase;
   color: $color_text;
+
+  @media (min-width: $tablet) {
+    min-height: 52px;
+  }
 }
 
 .form__input[type="text"],[type="tel"], [type="email"] {
@@ -264,6 +305,8 @@ textarea[disabled] {
 
   @media (min-width: $tablet) {
     height: 175px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -285,6 +328,8 @@ textarea[disabled] {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     align-items: center;
+    justify-items: start;
+    margin-top: -10px;
     padding: 0;
   }
 

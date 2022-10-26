@@ -2,9 +2,14 @@
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
-    @include container;
 
     border: none;
+  }
+}
+
+.main-form__container {
+  @media (min-width: $tablet) {
+    @include container;
   }
 }
 
@@ -14,7 +19,12 @@
   @include container;
 
   @media (min-width: $tablet) {
-    padding-top: 40px;
+    padding: 35px 40px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    padding-top: 60px;
   }
 }
 

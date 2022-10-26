@@ -141,11 +141,11 @@
 
   @media (min-width: $tablet) {
     height: auto;
+    border: none;
 
     &:not(:last-child) {
-      margin-right: 14px;
+      margin-right: 16px;
     }
-    border: none;
 
     &--current::before {
       content: "";
@@ -155,6 +155,16 @@
       right: 10px;
       height: 2px;
       background-color: $primary;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &--current::before {
+      bottom: 3px;
     }
   }
 }

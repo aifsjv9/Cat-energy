@@ -1,14 +1,14 @@
 .example {
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
 
   background-color: #eaeaea;
 
   @media (min-width: $tablet) {
     padding-top: 43px;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
     background-color: $white;
-    background-image: linear-gradient(to top, #eaeaea 462px, $white 462px);
+    background-image: linear-gradient(to top, #eaeaea 455px, $white 455px);
   }
 
   @media (min-width: $desktop) {
@@ -16,7 +16,7 @@
     padding-top: 0;
     // padding-left: 110px;
     // padding-right: 110px;
-    background-image: linear-gradient($white 170px, $basic_grey 170px);
+    background-image: linear-gradient($white 180px, $basic_grey 180px);
   }
 }
 
@@ -29,7 +29,7 @@
     grid-template-rows: 179px auto auto;
     column-gap: 45px;
     row-gap: 20px;
-    align-items: center;
+    align-items: end;
   }
 }
 
@@ -41,7 +41,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 0;
+    align-self: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -87,13 +88,13 @@
   @include margin_reset(20px);
 
   @media (min-width: $tablet) {
-    grid-template-columns: 164px 164px;
+    grid-template-columns: 162px 162px;
     column-gap: 42px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 47px;
+    margin-bottom: 55px;
   }
 }
 
@@ -191,6 +192,8 @@
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
+    max-width: 327px;
+    margin: 0;
   }
 }
 

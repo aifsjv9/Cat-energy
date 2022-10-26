@@ -4,12 +4,14 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 55px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    row-gap: 60px;
   }
 }
 
@@ -17,7 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 13px;
-  padding: 19px 0 25px;
+  padding: 19px 0 23px;
 
   @include container;
 
@@ -26,8 +28,8 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: auto;
-    grid-template-rows: 200px max-content auto;
-    row-gap: 33px;
+    grid-template-rows: 220px max-content auto;
+    row-gap: 25px;
     text-align: center;
     width: 100%;
     padding: 0 36px 39px;
@@ -102,10 +104,18 @@
   }
 }
 
+.cards__wrapper {
+  margin-bottom: 10px;
+}
+
 .cards__title-link {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .cards__title {
